@@ -6,12 +6,11 @@ import java.time.LocalDate;
 import java.util.Set;
 
 import hotel.BookingDetail;
-import hotel.BookingManager;
-import hotel.HotelInterface;
+import hotel.BookingInterface;
 
 public class BookingClient extends AbstractScriptedSimpleTest {
 
-	private HotelInterface bm = null;
+	private BookingInterface bm = null;
 
 	public static void main(String[] args) throws Exception {
 		BookingClient client = new BookingClient();
@@ -24,7 +23,7 @@ public class BookingClient extends AbstractScriptedSimpleTest {
 	public BookingClient() {
 		try {
 			Registry registry = LocateRegistry.getRegistry(null);
-			HotelInterface stub = (HotelInterface) registry.lookup("HotelServer");
+			BookingInterface stub = (BookingInterface) registry.lookup("HotelServer");
 			bm = stub;
 			System.out.println("Server found by client");
 		} catch (Exception e) {

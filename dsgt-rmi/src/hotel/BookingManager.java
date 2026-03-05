@@ -3,7 +3,7 @@ package hotel;
 import java.time.LocalDate;
 import java.util.*;
 
-public class BookingManager {
+public class BookingManager implements BookingInterface{
 
 	private Room[] rooms;
 

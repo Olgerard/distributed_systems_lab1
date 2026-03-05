@@ -4,7 +4,7 @@ import java.rmi.RemoteException;
 import java.time.LocalDate;
 import java.util.Set;
 
-public interface HotelInterface extends Remote{
+public interface BookingInterface extends Remote {
     Set<Integer> getAllRooms()
             throws RemoteException;
     boolean isRoomAvailable(Integer roomNumber, LocalDate date)
