@@ -11,7 +11,7 @@ public class BookingServer {
     public static void main(String[] args) throws Exception {
         try{
             BookingManager bookingManager = new BookingManager();
-            BookingInterface stub = (BookingInterface) UnicastRemoteObject.exportObject(bookingManager, 0);
+            BookingInterface stub = (BookingInterface) UnicastRemoteObject.exportObject(bookingManager, 1100);
 
             Registry registry = LocateRegistry.getRegistry();
             registry.bind("HotelServer", stub);

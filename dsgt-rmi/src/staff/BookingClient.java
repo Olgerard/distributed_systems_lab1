@@ -22,7 +22,7 @@ public class BookingClient extends AbstractScriptedSimpleTest {
 	 ***************/
 	public BookingClient() {
 		try {
-			Registry registry = LocateRegistry.getRegistry(null);
+			Registry registry = LocateRegistry.getRegistry(1099);
 			BookingInterface stub = (BookingInterface) registry.lookup("HotelServer");
 			bm = stub;
 			System.out.println("Server found by client");
